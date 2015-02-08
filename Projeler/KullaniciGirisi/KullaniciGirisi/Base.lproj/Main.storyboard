@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="KullaniciGirisi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giriş Yapınız" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71N-UO-1Oy">
+                                <rect key="frame" x="26" y="30" width="548" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5Jg-gM-Epy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3d-jc-8Fp">
+                                <rect key="frame" x="240" y="140" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="KkZ-yR-5Sa"/>
+                                    <constraint firstAttribute="height" constant="40" id="V8R-X6-y8r"/>
+                                </constraints>
+                                <state key="normal" title="Giriş Yap">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="butonaBasildi:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="iu1-w9-rTH"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kullanıcı Adınız" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zDb-Ik-vbT">
+                                <rect key="frame" x="200" y="80" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="FaH-Jq-MsL"/>
+                                    <constraint firstAttribute="width" constant="200" id="u1H-w5-9JQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="71N-UO-1Oy" secondAttribute="trailing" constant="10" id="1Xc-FK-fxt"/>
+                            <constraint firstItem="Q3d-jc-8Fp" firstAttribute="top" secondItem="zDb-Ik-vbT" secondAttribute="bottom" constant="20" id="3Ao-HE-YCP"/>
+                            <constraint firstAttribute="centerX" secondItem="zDb-Ik-vbT" secondAttribute="centerX" id="602-Qx-gHZ"/>
+                            <constraint firstItem="71N-UO-1Oy" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="10" id="MMm-bC-p1X"/>
+                            <constraint firstAttribute="centerX" secondItem="Q3d-jc-8Fp" secondAttribute="centerX" id="NgJ-oa-Ons"/>
+                            <constraint firstItem="71N-UO-1Oy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="rqz-c6-xlX"/>
+                            <constraint firstItem="zDb-Ik-vbT" firstAttribute="top" secondItem="71N-UO-1Oy" secondAttribute="bottom" constant="20" id="xK6-Kw-cRc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="Q3d-jc-8Fp" id="hGE-mH-BvX"/>
+                        <outlet property="label" destination="71N-UO-1Oy" id="J2j-gh-pME"/>
+                        <outlet property="textfield" destination="zDb-Ik-vbT" id="sC3-4r-tim"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="415" y="348"/>
+        </scene>
+    </scenes>
+</document>
