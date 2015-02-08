@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C5A98F551A874770008A6442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A98F541A874770008A6442 /* AppDelegate.swift */; };
+		C5A98F571A874770008A6442 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A98F561A874770008A6442 /* ViewController.swift */; };
+		C5A98F5A1A874770008A6442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A98F581A874770008A6442 /* Main.storyboard */; };
+		C5A98F5C1A874770008A6442 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5A98F5B1A874770008A6442 /* Images.xcassets */; };
+		C5A98F5F1A874770008A6442 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A98F5D1A874770008A6442 /* LaunchScreen.xib */; };
+		C5A98F6B1A874771008A6442 /* ArayuzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A98F6A1A874771008A6442 /* ArayuzTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C5A98F651A874770008A6442 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5A98F471A874770008A6442 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5A98F4E1A874770008A6442;
+			remoteInfo = Arayuz;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C5A98F4F1A874770008A6442 /* Arayuz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arayuz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5A98F531A874770008A6442 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5A98F541A874770008A6442 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C5A98F561A874770008A6442 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C5A98F591A874770008A6442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C5A98F5B1A874770008A6442 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C5A98F5E1A874770008A6442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		C5A98F641A874770008A6442 /* ArayuzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArayuzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5A98F691A874771008A6442 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5A98F6A1A874771008A6442 /* ArayuzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArayuzTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C5A98F4C1A874770008A6442 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5A98F611A874770008A6442 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C5A98F461A874770008A6442 = {
+			isa = PBXGroup;
+			children = (
+				C5A98F511A874770008A6442 /* Arayuz */,
+				C5A98F671A874771008A6442 /* ArayuzTests */,
+				C5A98F501A874770008A6442 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C5A98F501A874770008A6442 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5A98F4F1A874770008A6442 /* Arayuz.app */,
+				C5A98F641A874770008A6442 /* ArayuzTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C5A98F511A874770008A6442 /* Arayuz */ = {
+			isa = PBXGroup;
+			children = (
+				C5A98F541A874770008A6442 /* AppDelegate.swift */,
+				C5A98F561A874770008A6442 /* ViewController.swift */,
+				C5A98F581A874770008A6442 /* Main.storyboard */,
+				C5A98F5B1A874770008A6442 /* Images.xcassets */,
+				C5A98F5D1A874770008A6442 /* LaunchScreen.xib */,
+				C5A98F521A874770008A6442 /* Supporting Files */,
+			);
+			path = Arayuz;
+			sourceTree = "<group>";
+		};
+		C5A98F521A874770008A6442 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5A98F531A874770008A6442 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C5A98F671A874771008A6442 /* ArayuzTests */ = {
+			isa = PBXGroup;
+			children = (
+				C5A98F6A1A874771008A6442 /* ArayuzTests.swift */,
+				C5A98F681A874771008A6442 /* Supporting Files */,
+			);
+			path = ArayuzTests;
+			sourceTree = "<group>";
+		};
+		C5A98F681A874771008A6442 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5A98F691A874771008A6442 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C5A98F4E1A874770008A6442 /* Arayuz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5A98F6E1A874771008A6442 /* Build configuration list for PBXNativeTarget "Arayuz" */;
+			buildPhases = (
+				C5A98F4B1A874770008A6442 /* Sources */,
+				C5A98F4C1A874770008A6442 /* Frameworks */,
+				C5A98F4D1A874770008A6442 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Arayuz;
+			productName = Arayuz;
+			productReference = C5A98F4F1A874770008A6442 /* Arayuz.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C5A98F631A874770008A6442 /* ArayuzTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5A98F711A874771008A6442 /* Build configuration list for PBXNativeTarget "ArayuzTests" */;
+			buildPhases = (
+				C5A98F601A874770008A6442 /* Sources */,
+				C5A98F611A874770008A6442 /* Frameworks */,
+				C5A98F621A874770008A6442 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C5A98F661A874770008A6442 /* PBXTargetDependency */,
+			);
+			name = ArayuzTests;
+			productName = ArayuzTests;
+			productReference = C5A98F641A874770008A6442 /* ArayuzTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C5A98F471A874770008A6442 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Wissen;
+				TargetAttributes = {
+					C5A98F4E1A874770008A6442 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					C5A98F631A874770008A6442 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = C5A98F4E1A874770008A6442;
+					};
+				};
+			};
+			buildConfigurationList = C5A98F4A1A874770008A6442 /* Build configuration list for PBXProject "Arayuz" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C5A98F461A874770008A6442;
+			productRefGroup = C5A98F501A874770008A6442 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C5A98F4E1A874770008A6442 /* Arayuz */,
+				C5A98F631A874770008A6442 /* ArayuzTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C5A98F4D1A874770008A6442 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5A98F5A1A874770008A6442 /* Main.storyboard in Resources */,
+				C5A98F5F1A874770008A6442 /* LaunchScreen.xib in Resources */,
+				C5A98F5C1A874770008A6442 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5A98F621A874770008A6442 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C5A98F4B1A874770008A6442 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5A98F571A874770008A6442 /* ViewController.swift in Sources */,
+				C5A98F551A874770008A6442 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5A98F601A874770008A6442 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5A98F6B1A874771008A6442 /* ArayuzTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C5A98F661A874770008A6442 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5A98F4E1A874770008A6442 /* Arayuz */;
+			targetProxy = C5A98F651A874770008A6442 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C5A98F581A874770008A6442 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5A98F591A874770008A6442 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C5A98F5D1A874770008A6442 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5A98F5E1A874770008A6442 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C5A98F6C1A874771008A6442 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C5A98F6D1A874771008A6442 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C5A98F6F1A874771008A6442 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Arayuz/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C5A98F701A874771008A6442 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Arayuz/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C5A98F721A874771008A6442 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ArayuzTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Arayuz.app/Arayuz";
+			};
+			name = Debug;
+		};
+		C5A98F731A874771008A6442 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ArayuzTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Arayuz.app/Arayuz";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C5A98F4A1A874770008A6442 /* Build configuration list for PBXProject "Arayuz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5A98F6C1A874771008A6442 /* Debug */,
+				C5A98F6D1A874771008A6442 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5A98F6E1A874771008A6442 /* Build configuration list for PBXNativeTarget "Arayuz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5A98F6F1A874771008A6442 /* Debug */,
+				C5A98F701A874771008A6442 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C5A98F711A874771008A6442 /* Build configuration list for PBXNativeTarget "ArayuzTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5A98F721A874771008A6442 /* Debug */,
+				C5A98F731A874771008A6442 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C5A98F471A874770008A6442 /* Project object */;
+}
