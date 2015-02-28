@@ -152,7 +152,7 @@ protocol MyProtocol4
 class Media: MyProtocol4 {
 
     var name = ""
-    required init ()
+     required init ()
     {}
 }
 
