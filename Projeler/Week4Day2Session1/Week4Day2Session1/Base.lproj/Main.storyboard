@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fLm-BX-rR3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="K0q-Ww-szk">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6oY-74-fuz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="fLm-BX-rR3" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r35-vn-KwK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="bm3-GZ-C6c" kind="relationship" relationship="rootViewController" id="0vX-1d-O1M"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-136" y="316"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="zqc-Ir-FbS">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="bm3-GZ-C6c" customClass="LoginViewController" customModule="Week4Day2Session1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SEy-bD-3Nf"/>
+                        <viewControllerLayoutGuide type="bottom" id="FgJ-io-bQj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p7T-xl-OBb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moq-Hp-6gh">
+                                <rect key="frame" x="98" y="103" width="186" height="54"/>
+                                <color key="backgroundColor" red="0.3411764706" green="0.4549019608" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Create a User">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonCreateUserTapped:" destination="bm3-GZ-C6c" eventType="touchUpInside" id="Vc3-Hb-Sbc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Jgg-j0-BiG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PTR-Jp-mnY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="595.5" y="341.5"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="rD0-TM-JXH">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="0dJ-qw-jMp" customClass="ProfileViewController" customModule="Week4Day2Session1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WqC-nW-lxr"/>
+                        <viewControllerLayoutGuide type="bottom" id="gce-PI-JVw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ln4-qV-4Yj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KSf-ye-b93" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1079.5" y="341.5"/>
+        </scene>
+    </scenes>
+</document>
