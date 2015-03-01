@@ -1,6 +1,6 @@
 //
-//  Week4Day2Session1Tests.swift
-//  Week4Day2Session1Tests
+//  Week4Day2Session1_1Tests.swift
+//  Week4Day2Session1-1Tests
 //
 //  Created by Hasan Soysal on 01/03/15.
 //  Copyright (c) 2015 Hasan Soysal. All rights reserved.
@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-class Week4Day2Session1Tests: XCTestCase {
+class Week4Day2Session1_1Tests: XCTestCase {
     
     override func setUp() {
         super.setUp()
