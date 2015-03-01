@@ -14,16 +14,17 @@ enum Gender : Int
     case Male, Female
 }
 
-class User: NSObject {
+struct User {
    
+    static var user : User? = nil
     var name : String = ""
     var surname : String = ""
     var email : String = ""
     var gender : Gender = Gender.Male
     var profileImageUrl: String? = ""
-    var birthDate : NSDate? = nil
+    var birthDate : NSDate = NSDate()
     
-    init(name: String, surname : String, email:String, gender: Gender = Gender.Female, profileImageUrl: String? = nil, birthDate : NSDate? = nil)
+    init(name: String, surname : String, email:String, gender: Gender = Gender.Female, profileImageUrl: String? = nil, birthDate : NSDate)
     {
         self.name = name
         self.surname = surname
@@ -31,11 +32,15 @@ class User: NSObject {
         self.gender = gender
         self.profileImageUrl = profileImageUrl
         self.birthDate = birthDate
+        
+        User.user = self
     }
+    init(){}
     
-    func currentUser()->User
+        
+    static func currentUser()->User?
     {
-        return self
+        return User.user
     }
 }
 

@@ -24,7 +24,7 @@
         <!--Login View Controller-->
         <scene sceneID="6Gw-1u-k2l">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="asR-aM-BKB" customClass="LoginViewController" customModule="Week4Day2Session1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="asR-aM-BKB" customClass="LoginViewController" customModule="Week4Day2Session1_1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yaT-vi-Ed4"/>
                         <viewControllerLayoutGuide type="bottom" id="zmO-A1-3VJ"/>
@@ -56,7 +56,7 @@
         <!--Profile View Controller-->
         <scene sceneID="WDC-Gk-4dL">
             <objects>
-                <viewController storyboardIdentifier="ProfileViewController" id="Kij-Cw-sXi" customClass="ProfileViewController" customModule="Week4Day2Session1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="Kij-Cw-sXi" customClass="ProfileViewController" customModule="Week4Day2Session1_1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pmE-Ez-W2i"/>
                         <viewControllerLayoutGuide type="bottom" id="D9m-A2-0M2"/>
@@ -64,13 +64,60 @@
                     <view key="view" contentMode="scaleToFill" id="u3N-FH-12r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="33Y-Kr-BVl">
+                                <rect key="frame" x="5" y="72" width="102" height="102"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMz-Jd-qt5">
+                                <rect key="frame" x="115" y="72" width="244" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Surname" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28F-la-wp5">
+                                <rect key="frame" x="115" y="97" width="244" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3l-2F-lhG">
+                                <rect key="frame" x="115" y="121" width="244" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Birthdate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ima-i4-ngk">
+                                <rect key="frame" x="115" y="150" width="244" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Yst-eS-WcL">
+                                <rect key="frame" x="115" y="181" width="123" height="29"/>
+                                <segments>
+                                    <segment title="Erkek"/>
+                                    <segment title="Kadın"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="labelBirthdate" destination="ima-i4-ngk" id="sdv-e2-mz6"/>
+                        <outlet property="labelEmail" destination="D3l-2F-lhG" id="Jrd-D7-AQZ"/>
+                        <outlet property="labelName" destination="JMz-Jd-qt5" id="cC9-nh-5nT"/>
+                        <outlet property="labelSurname" destination="28F-la-wp5" id="LBW-DP-4EF"/>
+                        <outlet property="segmentedControlGender" destination="Yst-eS-WcL" id="yKL-tW-ZAs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1yc-38-XAR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1079.5" y="341.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="profile" width="1920" height="1088"/>
+    </resources>
 </document>
