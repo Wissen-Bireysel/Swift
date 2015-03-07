@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cUA-OT-h1F">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Recents View Controller-->
+        <scene sceneID="r38-rA-Ed9">
+            <objects>
+                <viewController storyboardIdentifier="RecentsViewController" id="q6M-cf-Ls6" customClass="RecentsViewController" customModule="Week5Day1Session3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jrt-jb-G2v"/>
+                        <viewControllerLayoutGuide type="bottom" id="HhW-0n-fxW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Mo-yU-Lfx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recents Page" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akI-Qf-W7d">
+                                <rect key="frame" x="27" y="210" width="107" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="joker" translatesAutoresizingMaskIntoConstraints="NO" id="Dpc-h5-d6x">
+                                <rect key="frame" x="72" y="46" width="240" height="128"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vvj-Xj-bPW">
+                                <rect key="frame" x="42" y="239" width="300" height="300"/>
+                                <color key="backgroundColor" red="0.2784313725" green="0.46274509800000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="R1j-gM-dOE" appends="YES" id="6ed-mp-Ifk"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="vkH-FY-Z0t" appends="YES" id="CeB-by-vWd"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="pcc-wJ-6Kt"/>
+                    <connections>
+                        <outlet property="imageViewJoker" destination="Dpc-h5-d6x" id="VLX-mm-G22"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sZ5-tE-Xfg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="R1j-gM-dOE">
+                    <connections>
+                        <action selector="viewLongPressed:" destination="q6M-cf-Ls6" id="Nwl-hH-IFj"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <tapGestureRecognizer id="vkH-FY-Z0t">
+                    <connections>
+                        <action selector="myViewTap:" destination="q6M-cf-Ls6" id="a8b-Up-iN8"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="674" y="546"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="muw-B8-tzy">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="bOm-Cn-tzP" customClass="DetailViewController" customModule="Week5Day1Session3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DJC-Ka-aP3"/>
+                        <viewControllerLayoutGuide type="bottom" id="cK6-iD-tw6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gze-Cy-VR7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NaW-MJ-OKE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a88-d2-l4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2314" y="525"/>
+        </scene>
+        <!--Contacts View Controller-->
+        <scene sceneID="Kj6-a9-GLe">
+            <objects>
+                <viewController storyboardIdentifier="ContactsViewController" id="z7r-fz-2DV" customClass="ContactsViewController" customModule="Week5Day1Session3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0IK-Jn-YcF"/>
+                        <viewControllerLayoutGuide type="bottom" id="MxO-e3-ECb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6pf-SR-0xp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contacts Page" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRV-e7-uY8">
+                                <rect key="frame" x="63" y="227" width="114" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="01m-8P-Cyd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PJq-fZ-nLr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="660" y="1418"/>
+        </scene>
+        <!--Favorites View Controller-->
+        <scene sceneID="nuO-EE-MrM">
+            <objects>
+                <viewController storyboardIdentifier="FavoritesViewController" id="9Il-lr-JUP" customClass="FavoritesViewController" customModule="Week5Day1Session3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z5o-dp-XIp"/>
+                        <viewControllerLayoutGuide type="bottom" id="uwT-DV-Aum"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ekQ-MS-r00">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Favorites Page" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYP-Bh-qDF">
+                                <rect key="frame" x="35" y="169" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzJ-v8-Qfn">
+                                <rect key="frame" x="63" y="219" width="150" height="150"/>
+                                <color key="backgroundColor" red="0.2784313725" green="0.46274509800000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Push Another View Controller">
+                                    <color key="titleColor" red="0.97647058819999999" green="0.96470588239999999" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bOm-Cn-tzP" kind="push" id="QpJ-qe-Bdl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5K8-gl-kfr"/>
+                    <connections>
+                        <outlet property="buttonDetail" destination="jzJ-v8-Qfn" id="aJB-HO-vWV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p3E-ni-ZJO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1486" y="-116"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="QZ8-2O-VzB">
+            <objects>
+                <tabBarController id="cUA-OT-h1F" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="paq-9c-8LN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="8XU-i1-QtF" kind="relationship" relationship="viewControllers" id="fvg-oP-rWK"/>
+                        <segue destination="q6M-cf-Ls6" kind="relationship" relationship="viewControllers" id="V2e-zK-qYf"/>
+                        <segue destination="z7r-fz-2DV" kind="relationship" relationship="viewControllers" id="8Yf-q3-LMr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1dC-Gm-AcS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-516" y="535"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aRa-w8-rdu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8XU-i1-QtF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="C20-wg-OHI"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="afv-Rw-SG6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9Il-lr-JUP" kind="relationship" relationship="rootViewController" id="15Y-wD-WXt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6dp-xV-Hx7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="674" y="-116"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="joker" width="1024" height="768"/>
+    </resources>
+</document>

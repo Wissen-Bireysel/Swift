@@ -27,7 +27,7 @@ class UniversitiesViewController: UIViewController, UITableViewDataSource, UITab
     //MARK: - Table View
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return 20
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return universities.count
