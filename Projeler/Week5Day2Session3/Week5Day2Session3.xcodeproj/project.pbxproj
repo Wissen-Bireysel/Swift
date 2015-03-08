@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C687FD091AAC699200B92E5C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687FD081AAC699200B92E5C /* DetailViewController.swift */; };
 		C6BB57DB1AAC5000009BCAA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BB57DA1AAC5000009BCAA6 /* AppDelegate.swift */; };
 		C6BB57E01AAC5000009BCAA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BB57DE1AAC5000009BCAA6 /* Main.storyboard */; };
 		C6BB57E21AAC5000009BCAA6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6BB57E11AAC5000009BCAA6 /* Images.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C687FD081AAC699200B92E5C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C6BB57D51AAC5000009BCAA6 /* Week5Day2Session3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Week5Day2Session3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6BB57D91AAC5000009BCAA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6BB57DA1AAC5000009BCAA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C687FD071AAC698300B92E5C /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C687FD081AAC699200B92E5C /* DetailViewController.swift */,
+			);
+			path = DetailViewController;
+			sourceTree = "<group>";
+		};
 		C6BB57CC1AAC5000009BCAA6 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +125,7 @@
 		C6BB57FA1AAC513C009BCAA6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C687FD071AAC698300B92E5C /* DetailViewController */,
 				C6BB57FB1AAC513C009BCAA6 /* ScrollViewController */,
 			);
 			path = Classes;
@@ -228,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C687FD091AAC699200B92E5C /* DetailViewController.swift in Sources */,
 				C6BB57DB1AAC5000009BCAA6 /* AppDelegate.swift in Sources */,
 				C6BB57FD1AAC515C009BCAA6 /* ScrollViewController.swift in Sources */,
 			);
@@ -421,6 +433,7 @@
 				C6BB57F61AAC5000009BCAA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C6BB57F71AAC5000009BCAA6 /* Build configuration list for PBXNativeTarget "Week5Day2Session3Tests" */ = {
 			isa = XCConfigurationList;
@@ -429,6 +442,7 @@
 				C6BB57F91AAC5000009BCAA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
