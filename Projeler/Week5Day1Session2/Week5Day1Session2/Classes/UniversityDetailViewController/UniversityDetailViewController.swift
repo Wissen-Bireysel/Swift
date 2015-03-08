@@ -39,7 +39,7 @@ class UniversityDetailViewController: UIViewController, UIPickerViewDelegate, UI
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return cities.count
     }
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         return cities[row]
     }
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
