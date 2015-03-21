@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IBs-14-OwN">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Segues" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KL7-Yc-HS0">
+                                <rect key="frame" x="220" y="84" width="160" height="80"/>
+                                <color key="backgroundColor" red="0.3889665705" green="0.57365702490000003" blue="0.92181581440000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="CxP-qu-UD9"/>
+                                    <constraint firstAttribute="width" constant="160" id="JNA-QN-T9c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="2. Sayfaya Gec">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openCategories:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zvb-LA-16z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYz-fS-xVl">
+                                <rect key="frame" x="194" y="205" width="212" height="69"/>
+                                <state key="normal" title="Kampanyalari Gor">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showCampaigns:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JUt-qN-SF8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.90971936677631571" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="KL7-Yc-HS0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Cke-bd-158"/>
+                            <constraint firstAttribute="centerX" secondItem="KL7-Yc-HS0" secondAttribute="centerX" id="mK7-6b-Npg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jh6-QE-4df"/>
+                    <connections>
+                        <segue destination="jpB-25-ddp" kind="show" identifier="Categories" id="qGk-UY-w2Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1874" y="-64"/>
+        </scene>
+        <!--CampaignsVC-->
+        <scene sceneID="ARi-EW-3wt">
+            <objects>
+                <viewController storyboardIdentifier="CampaignsVC" id="T6n-aU-IHs" customClass="CampaignsVC" customModule="Segues" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mCJ-y9-bMe"/>
+                        <viewControllerLayoutGuide type="bottom" id="xl4-3M-bzN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="okP-jg-POq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffb-3a-i5a">
+                                <rect key="frame" x="16" y="20" width="70" height="42"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.28627450980000002" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Kapat">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closePage:" destination="T6n-aU-IHs" eventType="touchUpInside" id="5y1-6f-nM8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oR1-SQ-6kx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1874" y="624"/>
+        </scene>
+        <!--Kategoriler-->
+        <scene sceneID="Vwh-xa-3If">
+            <objects>
+                <viewController title="Kategoriler" id="jpB-25-ddp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OR8-bJ-rDp"/>
+                        <viewControllerLayoutGuide type="bottom" id="SyU-W3-mYV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="63z-MB-1nB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIB-J4-UHi">
+                                <rect key="frame" x="116" y="72" width="368" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="jXH-BX-15B"/>
+                                </constraints>
+                                <state key="normal" title="3. Sayfaya Gec">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Wav-vh-K8S" kind="show" id="2Uq-0d-NJf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.79212068256578949" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="RIB-J4-UHi" firstAttribute="leading" secondItem="63z-MB-1nB" secondAttribute="leadingMargin" constant="100" id="QRr-xV-zML"/>
+                            <constraint firstItem="RIB-J4-UHi" firstAttribute="top" secondItem="OR8-bJ-rDp" secondAttribute="bottom" constant="8" id="bjb-xq-pwa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RIB-J4-UHi" secondAttribute="trailing" constant="100" id="iif-Kv-cIR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gpJ-qM-aVJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1153" y="-64"/>
+        </scene>
+        <!--Adreslerim-->
+        <scene sceneID="Drc-og-T7F">
+            <objects>
+                <viewController title="Adreslerim" id="Wav-vh-K8S" customClass="MyAddressesVC" customModule="Segues" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Xg-pu-dYX"/>
+                        <viewControllerLayoutGuide type="bottom" id="l5Q-ii-zc4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jGT-Wz-eLL">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbE-z7-PnN">
+                                <rect key="frame" x="249" y="81" width="103" height="43"/>
+                                <state key="normal" title="Adres Ekle">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="I44-ga-k9C" kind="presentation" id="5cf-WQ-QZ1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rA-HW-qbH">
+                                <rect key="frame" x="234" y="170" width="132" height="30"/>
+                                <state key="normal" title="Odeme Ekranini Ac">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showPaymentScreen:" destination="Wav-vh-K8S" eventType="touchUpInside" id="ldf-OF-DcR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="0.81411903782894723" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vIJ-gK-CYV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-411" y="-64"/>
+        </scene>
+        <!--Odeme-->
+        <scene sceneID="W8o-hc-6Cb">
+            <objects>
+                <viewController storyboardIdentifier="PaymentVC" title="Odeme" id="cld-AG-dXv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zU8-59-urm"/>
+                        <viewControllerLayoutGuide type="bottom" id="dSY-Y7-Di3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lab-JA-ARg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VGS-37-mtw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="231" y="-64"/>
+        </scene>
+        <!--New AddressVC-->
+        <scene sceneID="hgm-YK-goJ">
+            <objects>
+                <viewController id="I44-ga-k9C" customClass="NewAddressVC" customModule="Segues" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IC5-mL-SyS"/>
+                        <viewControllerLayoutGuide type="bottom" id="dCv-6D-B5F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gVF-ZC-OQa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q45-pO-Vzw">
+                                <rect key="frame" x="16" y="28" width="78" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Kapat">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeScreen:" destination="I44-ga-k9C" eventType="touchUpInside" id="FdZ-Xx-Dl6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mvz-CO-rFs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-411" y="802"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LC9-Ll-WnY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IBs-14-OwN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Iq0-PZ-x52">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="BxZ-VU-n6r">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NF5-MN-e9B"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Hj-Xt-F6X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2584" y="-64"/>
+        </scene>
+    </scenes>
+</document>
