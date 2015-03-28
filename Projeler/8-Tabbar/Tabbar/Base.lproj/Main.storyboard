@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zFq-Pi-fJO">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ayarlar-->
+        <scene sceneID="6Ce-Vh-oJM">
+            <objects>
+                <viewController id="VUU-DZ-lZf" customClass="SettingsVC" customModule="Tabbar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UAT-G3-jtG"/>
+                        <viewControllerLayoutGuide type="bottom" id="eGh-eu-EGy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gUa-rn-Fyf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="iEF-w1-9uV">
+                                <rect key="frame" x="140" y="28" width="320" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="449235471.66664302">
+                                    <!--2015-03-28 11:37:51 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAt-X2-0Vy">
+                                <rect key="frame" x="240" y="200" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="Swu-vf-NbP"/>
+                                    <constraint firstAttribute="height" constant="40" id="qKJ-Qd-uri"/>
+                                </constraints>
+                                <state key="normal" title="Kaydet">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSaveTapped:" destination="VUU-DZ-lZf" eventType="touchUpInside" id="lqX-Oa-Sfr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iEF-w1-9uV" firstAttribute="top" secondItem="UAT-G3-jtG" secondAttribute="bottom" constant="8" id="NbA-8f-t0v"/>
+                            <constraint firstAttribute="centerX" secondItem="iEF-w1-9uV" secondAttribute="centerX" id="O8e-Sc-p8F"/>
+                            <constraint firstItem="gAt-X2-0Vy" firstAttribute="top" secondItem="iEF-w1-9uV" secondAttribute="bottom" constant="10" id="oeM-Nq-xrx"/>
+                            <constraint firstAttribute="centerX" secondItem="gAt-X2-0Vy" secondAttribute="centerX" id="yEx-gg-qgz"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Ayarlar" image="tabbarSettings" id="AGT-T3-3Hb"/>
+                    <connections>
+                        <outlet property="btnSave" destination="gAt-X2-0Vy" id="ZqQ-Tr-Mkp"/>
+                        <outlet property="datePicker" destination="iEF-w1-9uV" id="9pP-u7-jMi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NAz-GQ-ueo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1191" y="857"/>
+        </scene>
+        <!--Anasayfa-->
+        <scene sceneID="lEW-OW-2uQ">
+            <objects>
+                <viewController id="6A4-L9-8XP" customClass="HomeVC" customModule="Tabbar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ehx-g9-jNe"/>
+                        <viewControllerLayoutGuide type="bottom" id="2S5-zB-bcU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uwp-Yu-WZf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kayıtlı Tarih" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGz-cV-MMy">
+                                <rect key="frame" x="16" y="40" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0Kt-HK-DxZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Utn-kR-7sg">
+                                <rect key="frame" x="16" y="90" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="nKe-aC-uXS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Utn-kR-7sg" firstAttribute="leading" secondItem="uwp-Yu-WZf" secondAttribute="leadingMargin" id="2K8-kY-Dmj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Utn-kR-7sg" secondAttribute="trailing" id="Ba5-9b-v3l"/>
+                            <constraint firstItem="Utn-kR-7sg" firstAttribute="top" secondItem="jGz-cV-MMy" secondAttribute="bottom" constant="20" id="D3a-ab-nMp"/>
+                            <constraint firstItem="jGz-cV-MMy" firstAttribute="leading" secondItem="uwp-Yu-WZf" secondAttribute="leadingMargin" id="KFd-35-CEK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jGz-cV-MMy" secondAttribute="trailing" id="XpQ-oK-PId"/>
+                            <constraint firstItem="jGz-cV-MMy" firstAttribute="top" secondItem="Ehx-g9-jNe" secondAttribute="bottom" constant="20" id="xa5-uf-EwR"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Anasayfa" image="tabbarHome" id="BbW-Z4-1gH"/>
+                    <connections>
+                        <outlet property="lblDate" destination="Utn-kR-7sg" id="zGA-sr-eF5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="srR-Px-C4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1192" y="194"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="9Ud-Yc-omc">
+            <objects>
+                <tabBarController id="zFq-Pi-fJO" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="VM2-6R-K1S">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="6A4-L9-8XP" kind="relationship" relationship="viewControllers" id="LvK-RF-uyI"/>
+                        <segue destination="VUU-DZ-lZf" kind="relationship" relationship="viewControllers" id="yZR-EK-qB2"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pyS-vs-21o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="374" y="524"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tabbarHome" width="16" height="16"/>
+        <image name="tabbarSettings" width="16" height="16"/>
+    </resources>
+</document>
