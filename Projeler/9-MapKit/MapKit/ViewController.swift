@@ -40,7 +40,24 @@ class ViewController: UIViewController {
         slider.minimumValue = 100
         slider.maximumValue = 10000
         
+        
+        
+        // Karaköy
+        var coord1 = CLLocationCoordinate2D(latitude:41.025120,longitude:28.977525)
+        var ann1 = WissenAnnotation(coordinate:coord1)
+        ann1.title = "Karaköy Kampüs"
+        ann1.subtitle = "Bahçeşehir Üniversitesi"
+        mapView.addAnnotation(ann1)
+        
+        // Beşiktaş
+        var coord2 = CLLocationCoordinate2D(latitude:41.042057,longitude:29.009072)
+        var ann2 = WissenAnnotation(coordinate:coord2)
+        ann2.title = "Beşiktaş Kampüs"
+        ann2.subtitle = "Bahçeşehir Üniversitesi"
+        mapView.addAnnotation(ann2)
+        
     }
+
     
     @IBAction func sliderValueChanged(sender: UISlider) {
         
@@ -109,6 +126,27 @@ extension ViewController:CLLocationManagerDelegate, MKMapViewDelegate {
         }
         else {
             println("Lokasyon boş geldi!")
+        }
+    }
+    
+    
+    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+        
+        if annotation is WissenAnnotation {
+            let identifier = "AnnotationView"
+            
+            var annView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
+            
+            if annView == nil {
+                annView = MKAnnotationView(annotation:annotation, reuseIdentifier:identifier)
+            }
+            annView.canShowCallout = true
+            annView.image = UIImage(named:"bu")
+            
+            return annView
+        }
+        else {
+            return nil
         }
     }
     
