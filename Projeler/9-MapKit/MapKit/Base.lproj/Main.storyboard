@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,19 +19,47 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EyH-7c-hHb">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="540"/>
                             </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vig-QM-9ea">
+                                <rect key="frame" x="384" y="556" width="200" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="THo-zb-21X"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Standart"/>
+                                    <segment title="Satellite"/>
+                                    <segment title="Hybrit"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="lRl-or-P1n"/>
+                                </connections>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="84E-FI-kB3">
+                                <rect key="frame" x="14" y="555" width="356" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="oYw-sJ-DvF"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="EyH-7c-hHb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="2c2-Lf-jNF"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="EyH-7c-hHb" secondAttribute="bottom" id="5I5-sY-3KT"/>
+                            <constraint firstItem="84E-FI-kB3" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="4Xk-lM-iYI"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="EyH-7c-hHb" secondAttribute="bottom" constant="60" id="5I5-sY-3KT"/>
+                            <constraint firstItem="Vig-QM-9ea" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="BPZ-dr-sPL"/>
+                            <constraint firstItem="Vig-QM-9ea" firstAttribute="top" secondItem="EyH-7c-hHb" secondAttribute="bottom" constant="16" id="FZN-yR-SJS"/>
+                            <constraint firstItem="Vig-QM-9ea" firstAttribute="leading" secondItem="84E-FI-kB3" secondAttribute="trailing" constant="16" id="IXE-D3-fev"/>
                             <constraint firstItem="EyH-7c-hHb" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="KnA-JH-BFA"/>
                             <constraint firstAttribute="trailing" secondItem="EyH-7c-hHb" secondAttribute="trailing" id="adO-Hg-wnB"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Vig-QM-9ea" secondAttribute="bottom" constant="16" id="sG6-H0-Wbj"/>
+                            <constraint firstItem="Vig-QM-9ea" firstAttribute="centerY" secondItem="84E-FI-kB3" secondAttribute="centerY" id="ybL-Ob-QbS"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="EyH-7c-hHb" id="A25-ad-Ju0"/>
+                        <outlet property="segment" destination="Vig-QM-9ea" id="SUB-vY-sP4"/>
+                        <outlet property="slider" destination="84E-FI-kB3" id="8KE-ks-bsy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

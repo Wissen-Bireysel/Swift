@@ -14,12 +14,15 @@ class ViewController: UIViewController {
 
     
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var segment: UISegmentedControl!
+    
     var locationManager:CLLocationManager!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         prepareMapView()
     }
 
@@ -27,14 +30,44 @@ class ViewController: UIViewController {
     
     func prepareMapView() {
         
+        mapView.delegate = self
+        
         locationManager = CLLocationManager()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.delegate = self
+        
+        slider.enabled = false
+        slider.minimumValue = 100
+        slider.maximumValue = 10000
+        
     }
+    
+    @IBAction func sliderValueChanged(sender: UISlider) {
+        
+        var meters = Double(slider.value)
+        
+        var region = MKCoordinateRegionMakeWithDistance(locationManager.location.coordinate, meters, meters)
+        mapView.setRegion(region, animated:false)
+    }
+    
+    
+    @IBAction func segmentValueChanged(sender: UISegmentedControl) {
+        switch segment.selectedSegmentIndex {
+        case 0:
+            mapView.mapType = MKMapType.Standard
+        case 1:
+            mapView.mapType = MKMapType.Satellite
+        case 2:
+            mapView.mapType = MKMapType.Hybrid
+        default:
+            break
+        }
+    }
+    
 
 }
 
-extension ViewController:CLLocationManagerDelegate {
-    
+extension ViewController:CLLocationManagerDelegate, MKMapViewDelegate {
     
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
         println("locationManager didFailWithError: \(error.description)")
@@ -62,7 +95,28 @@ extension ViewController:CLLocationManagerDelegate {
     }
     
     
+    
+    func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
+        if let location:CLLocation = userLocation?.location {
+            println("lat: \(location.coordinate.latitude)")
+            println("lon: \(location.coordinate.longitude)")
+            
+            
+            var region = MKCoordinateRegionMakeWithDistance(location.coordinate, 1000, 1000)
+            mapView.setRegion(region, animated:true)
+            slider.value = 1000
+            slider.enabled = true
+        }
+        else {
+            println("Lokasyon boş geldi!")
+        }
+    }
+    
+    
 }
+
+
+
 
 
 
