@@ -32,7 +32,23 @@ class WeatherService: NSObject {
                 var jsonError: NSErrorPointer = nil
                 if let weatherDict = NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.AllowFragments, error:jsonError) as? NSDictionary {
                     
-                    return Weather()
+                    var code:NSNumber = weatherDict["cod"] as NSNumber
+                    
+                    if code.integerValue == 200 {
+                        
+                        var mainDict = weatherDict["main"] as NSDictionary
+                        var temprature:NSNumber = mainDict["temp"] as NSNumber
+                        
+                        var weatherArray:NSArray = weatherDict["weather"] as NSArray
+                        
+                        var innerWeatherDict = weatherArray.firstObject as NSDictionary
+                        var description:String = innerWeatherDict["description"] as String
+                        
+                        return Weather(temprature:temprature.doubleValue, description:description)
+                    }
+                    else {
+                        return nil
+                    }
                 }
                 else {
                     return nil

@@ -9,5 +9,12 @@
 import UIKit
 
 class Weather: NSObject {
-   
+    
+    var temprature:Double
+    var desc:String
+    
+    init(temprature:Double, description:String) {
+        self.temprature = temprature
+        self.desc = description
+    }
 }
