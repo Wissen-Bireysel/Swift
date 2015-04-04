@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F5F26AD1ACFF04D002DD3E1 /* WeatherDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5F26AC1ACFF04D002DD3E1 /* WeatherDelegate.swift */; };
 		4FD2D3DB1ACFC17B008B0D73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD2D3DA1ACFC17B008B0D73 /* AppDelegate.swift */; };
 		4FD2D3E01ACFC17B008B0D73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FD2D3DE1ACFC17B008B0D73 /* Main.storyboard */; };
 		4FD2D3E21ACFC17B008B0D73 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FD2D3E11ACFC17B008B0D73 /* Images.xcassets */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F5F26AC1ACFF04D002DD3E1 /* WeatherDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDelegate.swift; sourceTree = "<group>"; };
 		4FD2D3D51ACFC17B008B0D73 /* ClientServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClientServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD2D3D91ACFC17B008B0D73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FD2D3DA1ACFC17B008B0D73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			children = (
 				4FD2D3FF1ACFC2C4008B0D73 /* WeatherService.swift */,
 				4FD2D4011ACFC32E008B0D73 /* Weather.swift */,
+				4F5F26AC1ACFF04D002DD3E1 /* WeatherDelegate.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FD2D4021ACFC32E008B0D73 /* Weather.swift in Sources */,
+				4F5F26AD1ACFF04D002DD3E1 /* WeatherDelegate.swift in Sources */,
 				4FD2D3FE1ACFC22C008B0D73 /* ViewController.swift in Sources */,
 				4FD2D4001ACFC2C4008B0D73 /* WeatherService.swift in Sources */,
 				4FD2D3DB1ACFC17B008B0D73 /* AppDelegate.swift in Sources */,

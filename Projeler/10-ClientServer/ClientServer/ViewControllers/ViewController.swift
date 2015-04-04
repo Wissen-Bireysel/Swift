@@ -22,9 +22,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        getWeatherForIstanbul()
+//        getWeatherForIstanbul()
+        getWeatherForIstanbulAsync()
     }
 
+    
+    //MARK: -
+    
+    func getWeatherForIstanbulAsync() {
+        let city = "Istanbul"
+        weatherService.delegate = self
+        weatherService.getWeatherForCityAsync(city)
+    }
     
     func getWeatherForIstanbul() {
         
@@ -51,6 +60,33 @@ class ViewController: UIViewController {
     }
 
 
+}
+
+
+//MARK: - WeatherDelegate Methods
+
+extension ViewController:WeatherDelegate {
+    
+    func weatherFetched(weather: Weather, forCity city: String) {
+        lblCity.text = city
+        lblDescription.text = weather.desc
+        lblTemprature.text = "\(Int(weather.temprature))"
+        
+        
+        var iconUrl = "http://openweathermap.org/img/w/" + weather.icon + ".png"
+        if let url = NSURL(string:iconUrl) {
+            //Senkron
+            if let iconData = NSData(contentsOfURL:url) {
+                imgWeather.image = UIImage(data:iconData)
+            }
+        }
+    }
+    
+    
+    func weatherNotFetchedForcity(city: String) {
+        UIAlertView(title:"Hava Durumu Alınamadı", message:"Lütfen internet bağlantınızı kontrol ediniz.", delegate:nil, cancelButtonTitle:"Tamam").show()
+    }
+    
 }
 
 
