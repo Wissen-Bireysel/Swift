@@ -44,7 +44,9 @@ class WeatherService: NSObject {
                         var innerWeatherDict = weatherArray.firstObject as NSDictionary
                         var description:String = innerWeatherDict["description"] as String
                         
-                        return Weather(temprature:temprature.doubleValue, description:description)
+                        var icon:String = innerWeatherDict["icon"] as String
+                        
+                        return Weather(temprature:temprature.doubleValue, description:description, icon:icon)
                     }
                     else {
                         return nil

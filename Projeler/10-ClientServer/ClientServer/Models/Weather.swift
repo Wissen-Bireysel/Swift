@@ -12,9 +12,12 @@ class Weather: NSObject {
     
     var temprature:Double
     var desc:String
+    var icon:String
     
-    init(temprature:Double, description:String) {
+    init(temprature:Double, description:String, icon:String) {
         self.temprature = temprature
         self.desc = description
+        self.icon = icon
     }
+    
 }

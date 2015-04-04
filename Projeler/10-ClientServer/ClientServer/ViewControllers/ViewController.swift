@@ -30,10 +30,24 @@ class ViewController: UIViewController {
         
         let city = "Istanbul"
         
-        var weather = weatherService.getWeatherForCity(city)
-        lblCity.text = city
-        lblDescription.text = weather!.desc
-        lblTemprature.text = "\(Int(weather!.temprature))"
+        if let weather = weatherService.getWeatherForCity(city) {
+            lblCity.text = city
+            lblDescription.text = weather.desc
+            lblTemprature.text = "\(Int(weather.temprature))"
+            
+            
+            var iconUrl = "http://openweathermap.org/img/w/" + weather.icon + ".png"
+            if let url = NSURL(string:iconUrl) {
+                //Senkron
+                if let iconData = NSData(contentsOfURL:url) {
+                    imgWeather.image = UIImage(data:iconData)
+                }
+            }
+            
+        }
+        else {
+            UIAlertView(title:"Hava Durumu Alınamadı", message:"Lütfen internet bağlantınızı kontrol ediniz.", delegate:nil, cancelButtonTitle:"Tamam").show()
+        }
     }
 
 
