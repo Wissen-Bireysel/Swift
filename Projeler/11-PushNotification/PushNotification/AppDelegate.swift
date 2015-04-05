@@ -39,6 +39,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         
+        if launchOptions != nil {
+
+            if let userInfo = launchOptions![UIApplicationLaunchOptionsRemoteNotificationKey] as? NSDictionary {
+                if let aps = userInfo["aps"] as? NSDictionary {
+                    var alert = aps["alert"] as String
+                    
+                    UIAlertView(title:"Push Notification Geldi!", message:alert, delegate:nil, cancelButtonTitle:"OK").show()
+                }
+            }
+        }
+        
         
         return true
     }
@@ -69,7 +80,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        println("Push Notification geldi!")
+        
+        if let aps = userInfo["aps"] as? NSDictionary {
+            var alert = aps["alert"] as String
+            
+            UIAlertView(title:"Push Notification Geldi!", message:alert, delegate:nil, cancelButtonTitle:"OK").show()
+        }
+        
+    }
 
 
 }
