@@ -62,17 +62,25 @@ class ContactsVC: UITableViewController {
     }
     */
 
-    /*
+
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
+            
+            var contact = contacts[UInt(indexPath.row)] as Contact
+            
+            let realm = RLMRealm.defaultRealm()
+            realm.beginWriteTransaction()
+            realm.deleteObject(contact)
+            realm.commitWriteTransaction()
+            
             // Delete the row from the data source
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+
 
     /*
     // Override to support rearranging the table view.
@@ -89,14 +97,38 @@ class ContactsVC: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        
+        if let newContactVC = segue.destinationViewController as? NewContactVC {
+            if segue.identifier == "Edit" {
+                
+                if let cell = sender as? UITableViewCell {
+                    
+                    if let indexPath = tableView.indexPathForCell(cell) {
+                        var contact = contacts[UInt(indexPath.row)] as Contact
+                        newContactVC.contact = contact
+                    }
+                }
+            }
+        }
+        
     }
-    */
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
