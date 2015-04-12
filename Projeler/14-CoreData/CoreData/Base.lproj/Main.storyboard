@@ -33,6 +33,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="FBK-NF-RRM" kind="show" identifier="Edit" id="76Q-Y6-eR2"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -43,7 +46,7 @@
                     <navigationItem key="navigationItem" title="Kişiler" id="5OS-lO-3Z1">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ob9-9c-abE">
                             <connections>
-                                <segue destination="FBK-NF-RRM" kind="show" id="pwd-Rc-tRg"/>
+                                <segue destination="FBK-NF-RRM" kind="show" identifier="New" id="pwd-Rc-tRg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -127,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KAo-dQ-hbQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="521" y="-657"/>
+            <point key="canvasLocation" x="603" y="-657"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZQz-0e-Ovf">
@@ -146,4 +149,7 @@
             <point key="canvasLocation" x="-901" y="-657"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="76Q-Y6-eR2"/>
+    </inferredMetricsTieBreakers>
 </document>

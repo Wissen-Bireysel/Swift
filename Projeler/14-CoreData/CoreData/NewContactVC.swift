@@ -9,6 +9,13 @@
 import UIKit
 import CoreData
 
+
+enum ContactType {
+    case New
+    case Edit
+}
+
+
 class NewContactVC: UIViewController {
 
     
@@ -17,6 +24,7 @@ class NewContactVC: UIViewController {
     @IBOutlet weak var txtEmail: UITextField!
     
     var appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+    var type:ContactType = ContactType.New
     
     @IBAction func saveContact(sender: UIButton) {
         var control1 = countElements(txtName.text) > 0
