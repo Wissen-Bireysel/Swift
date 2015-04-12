@@ -79,17 +79,24 @@ class ContactsVC: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            // Delete the row from the data source
+
+            var contact = contacts[indexPath.row]
+            
+            appDelegate.managedObjectContext?.deleteObject(contact)
+            appDelegate.saveContext()
+            
+            contacts.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
@@ -113,16 +120,18 @@ class ContactsVC: UITableViewController {
 
         if let newContactVC = segue.destinationViewController as? NewContactVC {
 
-            
-            if segue.identifier == "New" {
+            if segue.identifier == "Edit" {
                 
+                if let cell = sender as? UITableViewCell {
+                    
+                    if let indexPath = tableView.indexPathForCell(cell) {
+                        var contact = contacts[indexPath.row]
+                        
+                        newContactVC.type = .Edit
+                        newContactVC.contact = contact
+                    }
+                }
             }
-            else if segue.identifier == "Edit" {
-                
-            }
-            
-            //newcontactVC üzerinde işlem yap
-            
         }
         
     }

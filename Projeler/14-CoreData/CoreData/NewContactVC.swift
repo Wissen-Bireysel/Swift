@@ -25,6 +25,22 @@ class NewContactVC: UIViewController {
     
     var appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
     var type:ContactType = ContactType.New
+    var contact:Contact!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+        if contact != nil {
+            txtName.text = contact.name
+            txtNumber.text = contact.number
+            txtEmail.text = contact.email
+            
+            title = "Kişi Düzenle"
+        }
+        
+    }
+    
     
     @IBAction func saveContact(sender: UIButton) {
         var control1 = countElements(txtName.text) > 0
@@ -32,10 +48,18 @@ class NewContactVC: UIViewController {
         var control3 = countElements(txtEmail.text) > 0
         
         if control1 && control2 && control3 {
-            var newContact = NSEntityDescription.insertNewObjectForEntityForName("Contact", inManagedObjectContext:appDelegate.managedObjectContext!) as Contact
-            newContact.name = txtName.text
-            newContact.number = txtNumber.text
-            newContact.email = txtEmail.text
+            
+            if type == .New {
+                var newContact = NSEntityDescription.insertNewObjectForEntityForName("Contact", inManagedObjectContext:appDelegate.managedObjectContext!) as Contact
+                newContact.name = txtName.text
+                newContact.number = txtNumber.text
+                newContact.email = txtEmail.text
+            }
+            else {
+                contact.name = txtName.text
+                contact.number = txtNumber.text
+                contact.email = txtEmail.text
+            }
             
             appDelegate.saveContext()
             navigationController?.popViewControllerAnimated(true)
