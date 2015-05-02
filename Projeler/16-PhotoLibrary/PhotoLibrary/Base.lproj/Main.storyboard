@@ -19,9 +19,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eUW-eI-942">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2u-LM-pzD" customClass="RoundedButton" customModule="PhotoLibrary" customModuleProvider="target">
-                                <rect key="frame" x="234" y="550" width="132" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2u-LM-pzD" customClass="RoundedButton" customModule="PhotoLibrary" customModuleProvider="target">
+                                <rect key="frame" x="230" y="550" width="140" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="4MB-jw-naI"/>
+                                    <constraint firstAttribute="height" constant="30" id="xog-rn-Enf"/>
+                                </constraints>
                                 <state key="normal" title="Arka Plan Seç">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -38,6 +42,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eUW-eI-942" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="0dy-O0-otv"/>
+                            <constraint firstAttribute="centerX" secondItem="R2u-LM-pzD" secondAttribute="centerX" id="5ab-jk-Gmk"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="R2u-LM-pzD" secondAttribute="bottom" constant="20" id="DGb-6h-JYG"/>
                             <constraint firstAttribute="trailing" secondItem="eUW-eI-942" secondAttribute="trailing" id="TGl-fs-Fxd"/>
                             <constraint firstAttribute="bottom" secondItem="eUW-eI-942" secondAttribute="bottom" id="eXn-PJ-ApB"/>
                             <constraint firstItem="eUW-eI-942" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="kBW-Pd-wUV"/>
