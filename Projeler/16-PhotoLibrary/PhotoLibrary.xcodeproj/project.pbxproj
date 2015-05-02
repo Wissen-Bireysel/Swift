@@ -14,6 +14,7 @@
 		4F1E16691AF4AA2E00043FF1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F1E16671AF4AA2E00043FF1 /* LaunchScreen.xib */; };
 		4F1E16751AF4AA2F00043FF1 /* PhotoLibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1E16741AF4AA2F00043FF1 /* PhotoLibraryTests.swift */; };
 		4F1E167F1AF4ACD000043FF1 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1E167E1AF4ACD000043FF1 /* RoundedButton.swift */; };
+		4F1E16811AF4CD3000043FF1 /* BFAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1E16801AF4CD3000043FF1 /* BFAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		4F1E16731AF4AA2F00043FF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F1E16741AF4AA2F00043FF1 /* PhotoLibraryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryTests.swift; sourceTree = "<group>"; };
 		4F1E167E1AF4ACD000043FF1 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		4F1E16801AF4CD3000043FF1 /* BFAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				4F1E16621AF4AA2E00043FF1 /* Main.storyboard */,
 				4F1E16601AF4AA2E00043FF1 /* ViewController.swift */,
 				4F1E167E1AF4ACD000043FF1 /* RoundedButton.swift */,
+				4F1E16801AF4CD3000043FF1 /* BFAlert.swift */,
 			);
 			path = PhotoLibrary;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F1E16811AF4CD3000043FF1 /* BFAlert.swift in Sources */,
 				4F1E16611AF4AA2E00043FF1 /* ViewController.swift in Sources */,
 				4F1E167F1AF4ACD000043FF1 /* RoundedButton.swift in Sources */,
 				4F1E165F1AF4AA2E00043FF1 /* AppDelegate.swift in Sources */,

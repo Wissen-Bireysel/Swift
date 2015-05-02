@@ -18,6 +18,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         imagePicker.delegate = self
+        
+    }
+    
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        showAlert2()
+
     }
 
     @IBAction func changeBackground(sender: UIButton) {
@@ -75,6 +84,14 @@ class ViewController: UIViewController {
     func openImagePicker(sourceType:UIImagePickerControllerSourceType) {
         imagePicker.sourceType = sourceType
         presentViewController(imagePicker, animated:true, completion:nil)
+    }
+    
+    
+    
+    func showAlert2() {
+        BFAlert.showAlert(self, title:"Başlık", message:"Mesaj", actions:["Buton1", "Buton2"]) { (index) -> () in
+            println(index)
+        }
     }
     
 
