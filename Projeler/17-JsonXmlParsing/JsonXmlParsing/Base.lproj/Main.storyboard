@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gsv-bp-sdM">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--XMLVC-->
+        <scene sceneID="j5c-ol-0dw">
+            <objects>
+                <viewController id="x2f-kC-vfC" customClass="XMLVC" customModule="JsonXmlParsing" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="O6Z-fc-OhO"/>
+                        <viewControllerLayoutGuide type="bottom" id="1nQ-18-MuE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9h0-hp-ESn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="6Ga-wh-BDD">
+                                <rect key="frame" x="282" y="282" width="37" height="37"/>
+                                <color key="color" red="0.75294117650000003" green="0.22352941179999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5W6-CG-jKk">
+                                <rect key="frame" x="236" y="142" width="128" height="30"/>
+                                <state key="normal" title="Kampüsleri Göster">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showCampuses:" destination="x2f-kC-vfC" eventType="touchUpInside" id="O0d-xE-eeH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5W6-CG-jKk" firstAttribute="centerX" secondItem="6Ga-wh-BDD" secondAttribute="centerX" id="KnI-IV-LJE"/>
+                            <constraint firstItem="5W6-CG-jKk" firstAttribute="top" secondItem="O6Z-fc-OhO" secondAttribute="bottom" constant="78" id="oVq-QN-5a2"/>
+                            <constraint firstAttribute="centerY" secondItem="6Ga-wh-BDD" secondAttribute="centerY" id="pjN-ZG-qEU"/>
+                            <constraint firstAttribute="centerX" secondItem="6Ga-wh-BDD" secondAttribute="centerX" id="trs-jb-Ftt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="28k-Jm-wfm"/>
+                    <connections>
+                        <outlet property="spinner" destination="6Ga-wh-BDD" id="KAY-5h-MHQ"/>
+                        <segue destination="jKP-yL-9lf" kind="show" identifier="MapVCSegue" id="Icd-C6-mqB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uwa-cO-eZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1140" y="207"/>
+        </scene>
+        <!--JSONVC-->
+        <scene sceneID="aKq-L5-yDg">
+            <objects>
+                <viewController id="sim-yf-XJn" customClass="JSONVC" customModule="JsonXmlParsing" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Go-Ym-ZeC"/>
+                        <viewControllerLayoutGuide type="bottom" id="WLU-YR-Cp1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j2a-5u-YTm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="vPB-NO-5aK">
+                                <rect key="frame" x="282" y="282" width="37" height="37"/>
+                                <color key="color" red="0.75294117650000003" green="0.22352941179999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSb-Q1-7CO">
+                                <rect key="frame" x="236" y="128" width="128" height="30"/>
+                                <state key="normal" title="Kampüsleri Göster">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showCampuses:" destination="sim-yf-XJn" eventType="touchUpInside" id="Dex-vF-DkZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aSb-Q1-7CO" firstAttribute="top" secondItem="1Go-Ym-ZeC" secondAttribute="bottom" constant="64" id="212-dL-vJH"/>
+                            <constraint firstAttribute="centerY" secondItem="vPB-NO-5aK" secondAttribute="centerY" id="Jci-6w-D1k"/>
+                            <constraint firstItem="aSb-Q1-7CO" firstAttribute="centerX" secondItem="vPB-NO-5aK" secondAttribute="centerX" id="aZk-jT-AQO"/>
+                            <constraint firstAttribute="centerX" secondItem="vPB-NO-5aK" secondAttribute="centerX" id="crm-D5-fSd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="eB2-8j-vBr"/>
+                    <connections>
+                        <outlet property="spinner" destination="vPB-NO-5aK" id="RA5-20-s0x"/>
+                        <segue destination="jKP-yL-9lf" kind="show" identifier="MapVCSegue" id="wOd-Xd-0fr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Rr-hL-LZa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1140" y="-456"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="FE6-Bv-YGg">
+            <objects>
+                <tabBarController id="gsv-bp-sdM" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="tIb-PH-Pt5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="d9p-Vo-31p" kind="relationship" relationship="viewControllers" id="fOg-R8-y0F"/>
+                        <segue destination="xW1-4z-F24" kind="relationship" relationship="viewControllers" id="ZAu-FC-u2z"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="72c-ut-AzA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-608" y="-85"/>
+        </scene>
+        <!--MapVC-->
+        <scene sceneID="Yw4-Wm-6MK">
+            <objects>
+                <viewController id="jKP-yL-9lf" customClass="MapVC" customModule="JsonXmlParsing" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Dw-Tj-VjH"/>
+                        <viewControllerLayoutGuide type="bottom" id="hJ5-rg-IK7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3kY-9j-QFx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Yo-jM-1P2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2052" y="-85"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="26d-iX-6ve">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d9p-Vo-31p" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 1" id="PYd-ui-WKw"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Maq-PB-r2x">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sim-yf-XJn" kind="relationship" relationship="rootViewController" id="1LD-RO-F0d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QCO-DJ-ekF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="328" y="-456"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="AW1-Ij-J12">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xW1-4z-F24" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 2" id="nR8-Rh-Dbv"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rdB-9L-M8G">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="x2f-kC-vfC" kind="relationship" relationship="rootViewController" id="dhn-dP-H1E"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lsf-5v-LbA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="328" y="207"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Icd-C6-mqB"/>
+    </inferredMetricsTieBreakers>
+</document>
