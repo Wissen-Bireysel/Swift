@@ -16,6 +16,8 @@
 		4F5B5DE41AF5FED700FDC81E /* XMLVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5B5DE31AF5FED700FDC81E /* XMLVC.swift */; };
 		4F5B5DE61AF5FEE300FDC81E /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5B5DE51AF5FEE300FDC81E /* MapVC.swift */; };
 		4F5B5DE81AF6018D00FDC81E /* Campus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5B5DE71AF6018D00FDC81E /* Campus.swift */; };
+		4F5B5DEA1AF6208000FDC81E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5B5DE91AF6208000FDC81E /* MapKit.framework */; };
+		4F5B5DEC1AF6210900FDC81E /* CampusAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5B5DEB1AF6210900FDC81E /* CampusAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		4F5B5DE31AF5FED700FDC81E /* XMLVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLVC.swift; sourceTree = "<group>"; };
 		4F5B5DE51AF5FEE300FDC81E /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		4F5B5DE71AF6018D00FDC81E /* Campus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Campus.swift; sourceTree = "<group>"; };
+		4F5B5DE91AF6208000FDC81E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4F5B5DEB1AF6210900FDC81E /* CampusAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampusAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F5B5DEA1AF6208000FDC81E /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 		4F5B5DB51AF5FD4300FDC81E = {
 			isa = PBXGroup;
 			children = (
+				4F5B5DE91AF6208000FDC81E /* MapKit.framework */,
 				4F5B5DC01AF5FD4300FDC81E /* JsonXmlParsing */,
 				4F5B5DD61AF5FD4300FDC81E /* JsonXmlParsingTests */,
 				4F5B5DBF1AF5FD4300FDC81E /* Products */,
@@ -89,6 +95,7 @@
 				4F5B5DE31AF5FED700FDC81E /* XMLVC.swift */,
 				4F5B5DE51AF5FEE300FDC81E /* MapVC.swift */,
 				4F5B5DE71AF6018D00FDC81E /* Campus.swift */,
+				4F5B5DEB1AF6210900FDC81E /* CampusAnnotation.swift */,
 			);
 			path = JsonXmlParsing;
 			sourceTree = "<group>";
@@ -170,6 +177,11 @@
 				TargetAttributes = {
 					4F5B5DBD1AF5FD4300FDC81E = {
 						CreatedOnToolsVersion = 6.3.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					4F5B5DD21AF5FD4300FDC81E = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -222,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F5B5DC61AF5FD4300FDC81E /* JSONVC.swift in Sources */,
+				4F5B5DEC1AF6210900FDC81E /* CampusAnnotation.swift in Sources */,
 				4F5B5DE61AF5FEE300FDC81E /* MapVC.swift in Sources */,
 				4F5B5DC41AF5FD4300FDC81E /* AppDelegate.swift in Sources */,
 				4F5B5DE41AF5FED700FDC81E /* XMLVC.swift in Sources */,

@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--XMLVC-->
+        <!--XML-->
         <scene sceneID="j5c-ol-0dw">
             <objects>
                 <viewController id="x2f-kC-vfC" customClass="XMLVC" customModule="JsonXmlParsing" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,7 +38,7 @@
                             <constraint firstAttribute="centerX" secondItem="6Ga-wh-BDD" secondAttribute="centerX" id="trs-jb-Ftt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="28k-Jm-wfm"/>
+                    <navigationItem key="navigationItem" title="XML" id="28k-Jm-wfm"/>
                     <connections>
                         <outlet property="spinner" destination="6Ga-wh-BDD" id="KAY-5h-MHQ"/>
                         <segue destination="jKP-yL-9lf" kind="show" identifier="MapVCSegue" id="Icd-C6-mqB"/>
@@ -48,7 +48,7 @@
             </objects>
             <point key="canvasLocation" x="1140" y="207"/>
         </scene>
-        <!--JSONVC-->
+        <!--JSON-->
         <scene sceneID="aKq-L5-yDg">
             <objects>
                 <viewController id="sim-yf-XJn" customClass="JSONVC" customModule="JsonXmlParsing" customModuleProvider="target" sceneMemberID="viewController">
@@ -82,7 +82,7 @@
                             <constraint firstAttribute="centerX" secondItem="vPB-NO-5aK" secondAttribute="centerX" id="crm-D5-fSd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="eB2-8j-vBr"/>
+                    <navigationItem key="navigationItem" title="JSON" id="eB2-8j-vBr"/>
                     <connections>
                         <outlet property="spinner" destination="vPB-NO-5aK" id="RA5-20-s0x"/>
                         <segue destination="jKP-yL-9lf" kind="show" identifier="MapVCSegue" id="wOd-Xd-0fr"/>
@@ -122,18 +122,32 @@
                     <view key="view" contentMode="scaleToFill" id="3kY-9j-QFx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xSs-Oc-6yi">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hJ5-rg-IK7" firstAttribute="top" secondItem="xSs-Oc-6yi" secondAttribute="bottom" id="eFd-Y1-9fx"/>
+                            <constraint firstItem="xSs-Oc-6yi" firstAttribute="leading" secondItem="3kY-9j-QFx" secondAttribute="leading" id="l3D-7g-6Pn"/>
+                            <constraint firstAttribute="trailing" secondItem="xSs-Oc-6yi" secondAttribute="trailing" id="s93-H7-rgf"/>
+                            <constraint firstItem="xSs-Oc-6yi" firstAttribute="top" secondItem="9Dw-Tj-VjH" secondAttribute="bottom" id="vOT-Hh-bY9"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="xSs-Oc-6yi" id="FrD-1f-KwK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Yo-jM-1P2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2052" y="-85"/>
         </scene>
-        <!--Item 1-->
+        <!--JSON-->
         <scene sceneID="26d-iX-6ve">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d9p-Vo-31p" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="PYd-ui-WKw"/>
+                    <tabBarItem key="tabBarItem" title="JSON" id="PYd-ui-WKw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Maq-PB-r2x">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -148,11 +162,11 @@
             </objects>
             <point key="canvasLocation" x="328" y="-456"/>
         </scene>
-        <!--Item 2-->
+        <!--XML-->
         <scene sceneID="AW1-Ij-J12">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xW1-4z-F24" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="nR8-Rh-Dbv"/>
+                    <tabBarItem key="tabBarItem" title="XML" id="nR8-Rh-Dbv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rdB-9L-M8G">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -169,6 +183,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Icd-C6-mqB"/>
+        <segue reference="wOd-Xd-0fr"/>
     </inferredMetricsTieBreakers>
 </document>
