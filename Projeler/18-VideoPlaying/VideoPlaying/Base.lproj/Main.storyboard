@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="VideoPlaying" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwo-Id-a9u">
+                                <rect key="frame" x="243" y="148" width="114" height="30"/>
+                                <state key="normal" title="Dosyadan Oynat">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1rx-uF-EwK" kind="show" identifier="Dosya" id="bjj-8b-gMP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="655-Y9-JtA">
+                                <rect key="frame" x="253" y="228" width="95" height="30"/>
+                                <state key="normal" title="Stream Oynat">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1rx-uF-EwK" kind="show" identifier="Stream" id="ABn-XF-JwZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Kaynağı Seçiniz" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uku-wI-KnF">
+                                <rect key="frame" x="215" y="65" width="170" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rwo-Id-a9u" firstAttribute="top" secondItem="uku-wI-KnF" secondAttribute="bottom" constant="62" id="5MW-uB-vQz"/>
+                            <constraint firstItem="uku-wI-KnF" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="FCH-nv-78G"/>
+                            <constraint firstItem="Rwo-Id-a9u" firstAttribute="centerX" secondItem="uku-wI-KnF" secondAttribute="centerX" id="HN8-ch-3V6"/>
+                            <constraint firstItem="655-Y9-JtA" firstAttribute="top" secondItem="Rwo-Id-a9u" secondAttribute="bottom" constant="50" id="TI2-zl-hUc"/>
+                            <constraint firstItem="uku-wI-KnF" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="45" id="Xfl-BC-Slq"/>
+                            <constraint firstItem="Rwo-Id-a9u" firstAttribute="centerX" secondItem="655-Y9-JtA" secondAttribute="centerX" id="dwF-5l-fr4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-192" y="-69"/>
+        </scene>
+        <!--Video PlayerVC-->
+        <scene sceneID="V8Y-ZV-YBJ">
+            <objects>
+                <viewController id="1rx-uF-EwK" customClass="VideoPlayerVC" customModule="VideoPlaying" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ggm-zc-Tk4"/>
+                        <viewControllerLayoutGuide type="bottom" id="MFT-as-QVb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Las-yh-Shn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cpn-ee-iDm">
+                                <rect key="frame" x="16" y="20" width="67" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="WCp-46-Zb6"/>
+                                </constraints>
+                                <state key="normal" title="Kapat">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="lKb-jT-I2C" kind="unwind" unwindAction="goBack:" id="4Va-72-Xkv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cpn-ee-iDm" firstAttribute="leading" secondItem="Las-yh-Shn" secondAttribute="leadingMargin" id="636-p5-gtl"/>
+                            <constraint firstItem="Cpn-ee-iDm" firstAttribute="top" secondItem="ggm-zc-Tk4" secondAttribute="bottom" id="npn-mb-nSu"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0rl-PK-NUn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="lKb-jT-I2C" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="463" y="-74"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ABn-XF-JwZ"/>
+    </inferredMetricsTieBreakers>
+</document>
